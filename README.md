@@ -1,2 +1,2 @@
-# Web App Threat Case Study for Capstone Essay in Computer Science
+# SQLI and XSS Attacks in Web Applications: A Case Study
 This project is for the Capstone Essay for [Nate Arkin](https://twitter.com/natearkin) and [Garret Poole](https://twitter.com/garret_poole). Server code will be under the [Server Folder](https://github.com/narkin/web-app-threat-case-study/tree/main/Server), and client code will be in the [Client Folder](https://github.com/narkin/web-app-threat-case-study/tree/main/Client). 
