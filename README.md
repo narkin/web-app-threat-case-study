@@ -1,1 +1,2 @@
-# web-app-threat-case-study
+# Web App Threat Case Study for Capstone Essay in Computer Science
+This project is for the Capstone Essay for [Nate Arkin](https://twitter.com/natearkin) and [Garret Poole](https://twitter.com/garret_poole). Server code will be under the Server folder, and client code will be in the client folder. 
