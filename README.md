@@ -12,3 +12,4 @@ This project is for the Capstone Essay for [Nate Arkin](https://twitter.com/nate
 - Configured isolation network in firewall vm
   - [Wrote this config file](https://github.com/narkin/web-app-threat-case-study/blob/main/config-FIREWALL.XSS-SQLI-NET.xml)
 - Windows 10 VM users created, Github and VS Code installed
+- Created and uploaded login page for testing on client
