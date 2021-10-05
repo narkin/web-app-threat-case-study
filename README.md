@@ -10,5 +10,5 @@ This project is for the Capstone Essay for [Nate Arkin](https://twitter.com/nate
     - pfSense Firewall
 ### 10/5/2021
 - Configured isolation network in firewall vm
-  - Wrote this config file
+  - [Wrote this config file](https://github.com/narkin/web-app-threat-case-study/blob/main/config-FIREWALL.XSS-SQLI-NET.xml)
 - Windows 10 VM users created, Github and VS Code installed
