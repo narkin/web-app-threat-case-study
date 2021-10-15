@@ -22,10 +22,15 @@ app.get('/login', (req, res) => {
     res.sendFile(path.join(__dirname+'/../Client/Login_Page.html'));
 })
 
-///#region Auth API
+// login endpoint
 app.post('/api/login', (req, res) => {
     auth.authenticate(req).then(output => res.send(output));
 })
+
+// adminData endpoint
+app.post('/api/admin/getClients', (req, res) => {
+})
+
 
 app.listen(serverPort, () => {
     console.info(`Web server is running on port ${serverPort}`);

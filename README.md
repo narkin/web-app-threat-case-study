@@ -19,3 +19,4 @@ This project is for the Capstone Essay for [Nate Arkin](https://twitter.com/nate
 - Migrated test environment to Raspberry PI for transportability.
 - Uploaded Garret's test tables to sql server
 - Connected server code to sql server
+- Garret wrote client side code to make http request to web server
