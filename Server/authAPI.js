@@ -7,7 +7,7 @@ async function authenticate(req) {
     if (sqlData.length === 0) {
         return {success: false, err: 'Username or password is incorrect'};
     } else {
-        return {success: true, userData: sqlData[0]};
+        return {success: true, userData: sqlData};
     }
 }
 
