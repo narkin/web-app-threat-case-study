@@ -15,3 +15,7 @@ This project is for the Capstone Essay for [Nate Arkin](https://twitter.com/nate
 - Created and uploaded login page for testing on client
 ### 10/13/2021
 - Started development of [server side code](https://github.com/narkin/web-app-threat-case-study/tree/main/Server/server.js)
+### 10/14/2021
+- Migrated test environment to Raspberry PI for transportability.
+- Uploaded Garret's test tables to sql server
+- Connected server code to sql server
