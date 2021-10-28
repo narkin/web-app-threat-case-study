@@ -23,6 +23,10 @@ app.get('/login', (req, res) => {
     res.sendFile(path.join(__dirname+'/../Client/Login_Page.html'));
 })
 
+app.get('/admin', (req, res) => {
+    res.sendFile(path.join(__dirname + '/../Client/adminPage.html'));
+})
+
 // login endpoint
 app.post('/api/login', (req, res) => {
     auth.authenticate(req).then(output => res.send(output));
