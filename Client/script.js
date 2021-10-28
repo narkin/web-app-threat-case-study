@@ -9,7 +9,7 @@
 function authenticate() {
     // alert(`Hello, ${document.getElementById('usernameInput').value}`);
 
-    $.post('/api/login', {username:document.getElementById('usernameInput').value, password:document.getElementById('usernameInput').value}, data => {
+    $.post('/api/login', {username:document.getElementById('usernameInput').value, password:document.getElementById('passwordInput').value}, data => {
         //document.body.innertext = JSON.stringify(data);
         if (data.success) {
             document.getElementById('submitButton').style.background = 'Green';
