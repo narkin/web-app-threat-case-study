@@ -20,3 +20,9 @@ This project is for the Capstone Essay for [Nate Arkin](https://twitter.com/nate
 - Uploaded Garret's test tables to sql server
 - Connected server code to sql server
 - Garret wrote client side code to make http request to web server
+### Some data is missing from here, probably from a failed rebase we performed
+### 10/26/2021
+- Nate begun work on admin api
+## 10/28/2021
+- Nate finished admin api
+- Nate & Garret wrote client side javascript to display served client information
