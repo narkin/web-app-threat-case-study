@@ -23,11 +23,11 @@
     </style>
 </head>
 
-<body>
+<body onload="onLoadAuth();">
     <div class="header">
-        Company Client Information
+        Company Client Information - <a href='javascript:logout()'>Logout</a>
     </div>
-    <table id="clientTable"></table>
+    <table id="clientTable" border="1"></table>
     <script src="./jquery-3.6.0.min.js"></script>
     <script src="./script.js"></script>
 </body>
