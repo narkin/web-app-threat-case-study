@@ -8,6 +8,7 @@ const app = express();
 const serverPort = 5002;
 const path = require('path');
 const auth = require('./authAPI');
+const admin = require('./adminAPI');
 
 require('console-stamp')(console);
 
@@ -29,6 +30,7 @@ app.post('/api/login', (req, res) => {
 
 // adminData endpoint
 app.post('/api/admin/getClients', (req, res) => {
+    admin.getClientData(req).then(output => res.send(output));
 })
 
 

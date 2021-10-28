@@ -7,10 +7,16 @@ const secrets = require('./secrets');
 const auth = require('./authAPI');
 
 async function getClientData(req) {
-    if ((await auth.authenticate(req)).success) {
+    var authenticationResult = await auth.authenticate(req);
+    if (authenticationResult.success && authenticationResult.userData[0].role === 'Admin') {
         console.log(`Sucessful admin authentication of user ${req.body.username}.`);
-
+        const connection = await sql.createConnection(secrets.mysql_login);
+        const [sqlData] = await connection.execute(`SELECT * FROM company_clients;`);
+        return {success: true, clientData: sqlData};
     } else {
         console.log(`Unsucessful admin authentication for user ${req.body.username}.`)
+        return {success: false};
     }
 }
+
+module.exports = { getClientData }
