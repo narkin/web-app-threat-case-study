@@ -30,6 +30,7 @@ function onLoadAuth() {
     var cachedCreds = JSON.parse(window.sessionStorage.getItem('cacheAuth'));
     $.post('/api/admin/getClients', cachedCreds, data => {
         if (data.success) {
+            document.getElementById('header').innerHTML = `Company Client Information - Welcome, ${cachedCreds.username}! <a href='javascript:logout()'>Logout</a>`;
             // document.getElementById('clientTable').innerText = JSON.stringify(data.clientData);
             var trHeader = document.createElement('tr');
             ['First Name', 'Last Name', 'Gender', 'Age', 'Email', 'Phone', 'Education', 'Occupation', 'Experience (Years)', 'Salary', 'Marital Status', 'Number of Children', 'Annual Income', 'Payments Due', 'Paid'].forEach(columnTitle => {
