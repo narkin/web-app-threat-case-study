@@ -9,6 +9,8 @@ const serverPort = 5002;
 const path = require('path');
 const auth = require('./authAPI');
 const admin = require('./adminAPI');
+const stringStore = require('./stringStore');
+const fs = require('fs');
 
 require('console-stamp')(console);
 
@@ -35,6 +37,28 @@ app.post('/api/login', (req, res) => {
 // adminData endpoint
 app.post('/api/admin/getClients', (req, res) => {
     admin.getClientData(req).then(output => res.send(output));
+})
+
+app.get('/XSS-StringStore', (req, res) => {
+    // res.sendFile(path.join(__dirname + '/../Client/stringStore.html'));
+
+    var page = fs.readFileSync(__dirname + '/../Client/stringStore.html');
+
+    var replacement = stringStore.retrieveString();
+
+    page = page.toString().replace('<!-- StoredString Location -->', replacement);
+    res.send(page);
+})
+
+// stringStore Store New String
+app.post('/api/string/store', (req, res) => {
+    stringStore.storeNewString(req.body.stringToStore)
+    res.send(stringStore.retrieveString());
+})
+
+// stringStore Get Stored String
+app.get('/api/string/get', (req, res) => {
+    res.send(stringStore.retrieveString());
 })
 
 
